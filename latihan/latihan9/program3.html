@@ -1,0 +1,42 @@
+<form action="halaman utama.html" method="get" id="myForm" onsubmit=" return validasi()">
+    <p>grade</p>
+    nama  <input   autocomplete="off" type="text" name="nama" placeholder="nama"><br>
+    kelas  <input  autocomplete="off" type="text" name="kelas" placeholder="kelas"><br>
+    nilai  <input  autocomplete="off" type="text" name="nilai" placeholder="nilai">
+  
+  
+    <input  class="login" type="submit" name="submit" value="tekan">
+  </form>
+</body>
+<script type="text/javascript">
+function validasi(){
+  var nama= document.forms["myForm"]["nama"].value;
+  var kelas= document.forms["myForm"]["kelas"].value;
+  var nilai= document.forms["myForm"]["nilai"].value;
+
+  var grade ="";
+
+if(nilai >= 81){
+  grade = "A";
+}
+else if(nilai >= 61){
+  grade = "B";
+}
+else if(nilai >= 41){
+  grade = "C";
+}
+else if(nilai >= 16){
+  grade = "D";
+}
+else if(nilai >= 0){
+  grade = "E";
+}
+else{
+  grade = "F"
+}
+document.write("Nama : " + nama + "<br>")
+document.write("<P>Kelas : " + kelas + "<br></p>")
+document.write(`<p>Nilai  anda : ${grade} </p>`  );
+
+      }
+</script>
